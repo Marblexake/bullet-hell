@@ -4,24 +4,30 @@ using UnityEngine;
 
 public class Ship_1 : MonoBehaviour {
 
-    private float amplitude = 0.45f;
+    private float delta = 0.65f;
     private float zValue;
     private float ztime;
 
 	// Use this for initialization
 	void Start ()
     {
-
-        transform.Rotate(0, 0, -60);
+        //sets the inital rotation of the ship
+        transform.Rotate(0, 0, -50);
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-        zValue = amplitude * Mathf.Sin(ztime);
-        Debug.Log(zValue);
+        //interpolates between delta and -delta
+        zValue = delta * Mathf.Sin(ztime);
+
+        //Debug.Log(Mathf.Sin(ztime)); Delta controls how much the ship rotates
+
+        //applies the rotation 
         transform.Rotate(0, 0, zValue);
+
+        //
         ztime += Time.deltaTime;
 
     }

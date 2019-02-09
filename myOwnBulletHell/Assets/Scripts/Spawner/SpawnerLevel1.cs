@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SpawnerLevel1 : MonoBehaviour {
 
-    public int nBullets = 10;
     public GameObject yellowBullet;
 
     private GameObject spawnedBullet;
@@ -12,20 +11,36 @@ public class SpawnerLevel1 : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
+        StartCoroutine(spawnBullets());
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-        spawnedBullet = Instantiate(yellowBullet, gameObject.transform.position, gameObject.transform.rotation);
+        //spawnedBullet = Instantiate(yellowBullet, gameObject.transform.position, gameObject.transform.rotation);
 
-        spawnedBullet.transform.parent = gameObject.transform;
+        //spawnedBullet.transform.parent = gameObject.transform;
 
-        spawnedBullet.transform.parent = null;
+        //spawnedBullet.transform.parent = null;
 
 
 	}
+
+    IEnumerator spawnBullets()
+    {
+        for(; ; )
+        {
+            spawnedBullet = Instantiate(yellowBullet, gameObject.transform.position, gameObject.transform.rotation);
+
+            spawnedBullet.transform.parent = gameObject.transform;
+
+            spawnedBullet.transform.parent = null;
+
+            yield return new WaitForSeconds(0.15f);
+        }
+        
+    }
 
 
 

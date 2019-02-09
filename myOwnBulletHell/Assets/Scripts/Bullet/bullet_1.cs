@@ -6,8 +6,21 @@ public class bullet_1 : MonoBehaviour {
 
     public float speed = 4f;
 
-	// Update is called once per frame
-	void Update () {
+    private float MaxTimeInScene = 6.0f;
+
+    void Start()
+    {
+        //StartTime = Time.time;  
+    }
+
+    // Update is called once per frame
+    void Update ()
+    {
+        //Just moves the bullet in a straight line on its Y-axis (the yellow line)
         transform.position += transform.up * speed * Time.deltaTime;
+
+        //Destroys the bullet after 10 seconds
+        Destroy(gameObject, MaxTimeInScene);
 	}
+
 }
