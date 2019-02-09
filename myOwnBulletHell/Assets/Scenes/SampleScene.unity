@@ -314,7 +314,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nBullets: 10
-  bullet: {fileID: 1195135546575912, guid: d6793e9f9d3ed744f92980baf3da2205, type: 2}
+  yellowBullet: {fileID: 1195135546575912, guid: d6793e9f9d3ed744f92980baf3da2205,
+    type: 2}
 --- !u!1 &1864817747 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1523338043920326, guid: e08438996f66fde48aec4b4b2316b536,
@@ -332,4 +333,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nBullets: 10
-  bullet: {fileID: 1195135546575912, guid: d6793e9f9d3ed744f92980baf3da2205, type: 2}
+  yellowBullet: {fileID: 1195135546575912, guid: d6793e9f9d3ed744f92980baf3da2205,
+    type: 2}
