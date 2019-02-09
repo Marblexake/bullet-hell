@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class bullet_2 : MonoBehaviour {
 
-    public GameObject yellowBullet;
+    public GameObject invertedBullet;
+    public float distance = 1.4f;
+    public float speed = 8f;
 
-    private float speed = 8f;
     private float StartTime;
     private float CreationTime;
     private GameObject spawnedBullet;
@@ -25,10 +26,10 @@ public class bullet_2 : MonoBehaviour {
 
         CheckTime();
 
-        if(CreationTime == 10.0f)
+        if(CreationTime > distance)
         {
-            Destroy(gameObject);
             explode();
+            Destroy(gameObject);
         }
 	}
 
@@ -40,10 +41,7 @@ public class bullet_2 : MonoBehaviour {
 
     public void explode()
     {
-        for (int i = 0; i < 11; i++)
-        {
-            spawnedBullet = Instantiate(yellowBullet, gameObject.transform.position, gameObject.transform.rotation); 
-
-        }
+        spawnedBullet = Instantiate(invertedBullet, gameObject.transform.position, gameObject.transform.rotation);
+        spawnedBullet.transform.Rotate(0, 0, 180);
     }
 }

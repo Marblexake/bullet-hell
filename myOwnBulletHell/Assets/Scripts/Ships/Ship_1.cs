@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Ship_1 : MonoBehaviour {
 
-    private float delta = 0.65f;
+    private float delta = 0.7f;
     private float zValue;
     private float ztime;
 
@@ -20,14 +20,13 @@ public class Ship_1 : MonoBehaviour {
 	void Update () {
 
         //interpolates between delta and -delta
-        zValue = delta * Mathf.Sin(ztime);
+        zValue = delta * Mathf.Sin(ztime * 2f);
 
         //Debug.Log(Mathf.Sin(ztime)); Delta controls how much the ship rotates
 
         //applies the rotation 
         transform.Rotate(0, 0, zValue);
 
-        //
         ztime += Time.deltaTime;
 
     }

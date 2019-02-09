@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ship_2 : MonoBehaviour {
 
-    private float delta = 7f;
+    private float delta = 2.4f;
     private float xValue;
     private float xTime;
 
@@ -13,7 +13,8 @@ public class ship_2 : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
-        position = new Vector3(0, 6, 0);
+        //transform.position = new Vector3(-1, 0, 0);
+        position = new Vector3(0, 8, 0);
 	}
 	
 	// Update is called once per frame
