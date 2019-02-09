@@ -18,11 +18,11 @@ public class SpawnerLevel1 : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        spawnedBullet = Instantiate(yellowBullet);
+        spawnedBullet = Instantiate(yellowBullet, gameObject.transform.position, gameObject.transform.rotation);
 
         spawnedBullet.transform.parent = gameObject.transform;
 
-        //spawnedBullet.transform.parent = null;
+        spawnedBullet.transform.parent = null;
 
 
 	}
