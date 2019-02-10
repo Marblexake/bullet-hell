@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnerLevel3 : MonoBehaviour {
+public class SpawnerLevel3_2 : MonoBehaviour {
 
     //155 - 205
-    //Spawner3
+    //Spawner3_2
 
     public GameObject blueBullet;
 
@@ -13,7 +13,7 @@ public class SpawnerLevel3 : MonoBehaviour {
     public float seconds = 0.15f;
     public float delta = 0.6f;
     public float speed = 3f;
-    public float startingAngle = 155f;
+    public float startingAngle = 205f;
 
 
     private float t;
@@ -30,7 +30,7 @@ public class SpawnerLevel3 : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        angle = delta * Mathf.Sin(t * speed);
+        angle = -delta * Mathf.Sin(t * speed);
         transform.Rotate(0, 0, angle);
 
         t += Time.deltaTime;
@@ -42,7 +42,7 @@ public class SpawnerLevel3 : MonoBehaviour {
         {
             spawnedBullet = Instantiate(blueBullet, gameObject.transform.position, gameObject.transform.rotation);
             spawnedBullet.transform.parent = null;
-        
+
             yield return new WaitForSeconds(spawnrate);
 
         }

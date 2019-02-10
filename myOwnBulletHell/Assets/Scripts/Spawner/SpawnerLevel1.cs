@@ -25,7 +25,7 @@ public class SpawnerLevel1 : MonoBehaviour
         for(; ; )
         {
             spawnedBullet = Instantiate(yellowBullet, gameObject.transform.position, gameObject.transform.rotation);
-            spawnedBullet.transform.parent = gameObject.transform;
+            //spawnedBullet.transform.parent = gameObject.transform;
             spawnedBullet.transform.parent = null;
 
             yield return new WaitForSeconds(spawnrate);

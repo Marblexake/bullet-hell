@@ -338,6 +338,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1178392807}
+  - component: {fileID: 1178392808}
   m_Layer: 0
   m_Name: spawner3
   m_TagString: Untagged
@@ -358,6 +359,23 @@ Transform:
   m_Father: {fileID: 1546586706}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1178392808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1178392806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39357b48e700cbf4aa21554598dc247b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blueBullet: {fileID: 1206505849240990, guid: eddac429426d6064da9d046e38f23dea, type: 2}
+  spawnrate: 0.05
+  seconds: 0.15
+  delta: 1.8
+  speed: 9
+  startingAngle: 155
 --- !u!1 &1207189183
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,6 +384,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1207189184}
+  - component: {fileID: 1207189185}
   m_Layer: 0
   m_Name: spawner3_2
   m_TagString: Untagged
@@ -386,6 +405,23 @@ Transform:
   m_Father: {fileID: 1546586706}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1207189185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1207189183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bef7f7fff19339f409dff5f92c97e7d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blueBullet: {fileID: 1206505849240990, guid: eddac429426d6064da9d046e38f23dea, type: 2}
+  spawnrate: 0.05
+  seconds: 0.15
+  delta: 1.4
+  speed: 7
+  startingAngle: 205
 --- !u!1 &1382270025 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1416569060966002, guid: e08438996f66fde48aec4b4b2316b536,
@@ -449,7 +485,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 161008, guid: 236055fb118b89949bf4698f3928dd5b, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 236055fb118b89949bf4698f3928dd5b, type: 2}
@@ -495,7 +531,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1383733819351434, guid: bac91a0981ffae54a91bc706dff932ad, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114089723777865500, guid: bac91a0981ffae54a91bc706dff932ad, type: 2}
