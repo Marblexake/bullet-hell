@@ -22,14 +22,14 @@ public class SpawnerLevel3_2 : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
+        //Sets the rotation of the spawner
         transform.Rotate(0, 0, startingAngle);
         StartCoroutine(FireBullets());
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
+        //Determines how much the spawner rotates, making the spawner rock left to right nicely
         angle = -delta * Mathf.Sin(t * speed);
         transform.Rotate(0, 0, angle);
 
@@ -40,6 +40,7 @@ public class SpawnerLevel3_2 : MonoBehaviour {
     {
         for(; ; )
         {
+            //Spawns the bullet where the spawner is, then unparents the bullet for it to move freely
             spawnedBullet = Instantiate(blueBullet, gameObject.transform.position, gameObject.transform.rotation);
             spawnedBullet.transform.parent = null;
 

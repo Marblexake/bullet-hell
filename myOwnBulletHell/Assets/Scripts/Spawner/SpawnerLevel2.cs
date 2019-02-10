@@ -19,14 +19,16 @@ public class SpawnerLevel2 : MonoBehaviour
 
     void Update()
     {
+        //This allows the missiles to be shot randomly
         chooseSpawnRate();
-        Debug.Log(number);
     }
 
     void chooseSpawnRate()
     {
+        //Generates a random int between 1-4, 1 inclusive, 4 exclusive
         number = Random.Range(1, 4);
 
+        //Based on whatever number was picked, change the spawnrate
         if (number == 1)
         {
             spawnrate = 0.5f;
@@ -45,10 +47,9 @@ public class SpawnerLevel2 : MonoBehaviour
     {
         for (; ; )
         {
+            //Spawns the missile where the spawner is, then unparent the bullet for free movement.
             spawnedBullet = Instantiate(missile2, gameObject.transform.position, gameObject.transform.rotation);
-            spawnedBullet.transform.parent = gameObject.transform;
             spawnedBullet.transform.parent = null;
-            //chooseSpawnRate();
 
             yield return new WaitForSeconds(spawnrate);
         }

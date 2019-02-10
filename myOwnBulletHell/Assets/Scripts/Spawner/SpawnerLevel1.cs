@@ -13,21 +13,19 @@ public class SpawnerLevel1 : MonoBehaviour
 	void Start ()
     {
         StartCoroutine(spawnBullets());
-
 	}
-	void Update ()
-    {
 
-	}
 
     IEnumerator spawnBullets()
     {
+        //This causes the loop to run infinitely
         for(; ; )
         {
+            //Spawns the bullet at where the spawner is, and then unparent them so that the bullet can move freely
             spawnedBullet = Instantiate(yellowBullet, gameObject.transform.position, gameObject.transform.rotation);
-            //spawnedBullet.transform.parent = gameObject.transform;
             spawnedBullet.transform.parent = null;
 
+            //Determines how often the spawner spawns
             yield return new WaitForSeconds(spawnrate);
         }
         

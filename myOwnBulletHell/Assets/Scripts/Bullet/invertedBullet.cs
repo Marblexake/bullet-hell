@@ -16,7 +16,7 @@ public class invertedBullet : MonoBehaviour {
     // Update is called once per frame
     void Update ()
     {
-        //Just moves the bullet in a straight line on its Y-axis (the yellow line) 
+        //Just moves the bullet in a straight line on its Y-axis (the yellow line)  
         transform.position += transform.up * -speed * Time.deltaTime;
 
         //Destroys the bullet after 10 seconds

@@ -20,8 +20,9 @@ public class ship_2 : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+        //interpolates between delta and -delta in a nice curve, just like on the sine graph
+        //The 2f inside the Sin is the speed
         position.x = delta * Mathf.Sin(xTime);
-
         transform.position = position;
 
         xTime += Time.deltaTime;

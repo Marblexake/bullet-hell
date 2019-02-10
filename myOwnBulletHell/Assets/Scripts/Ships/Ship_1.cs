@@ -19,6 +19,7 @@ public class Ship_1 : MonoBehaviour {
 	void Update () {
 
         //interpolates between delta and -delta in a nice curve, just like on the sine graph
+        //The 2f inside the Sin is the speed
         zValue = delta * Mathf.Sin(ztime * 2f);
 
         //Debug.Log(Mathf.Sin(ztime)); Delta controls how much the ship rotates

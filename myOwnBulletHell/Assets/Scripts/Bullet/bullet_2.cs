@@ -5,6 +5,8 @@ using UnityEngine;
 public class bullet_2 : MonoBehaviour {
 
     public GameObject invertedBullet;
+
+    //*How long bullet has been in scene* Because the longer the bullet is in scene, the further it travels
     public float distance = 1.4f;
     public float speed = 8f;
 
@@ -26,9 +28,12 @@ public class bullet_2 : MonoBehaviour {
 
         CheckTime();
 
+        //Distance here contraints how long the bullet has existed in the scene
         if(CreationTime > distance)
         {
             explode();
+
+            //If bullet has been in scene long enough, destroy it
             Destroy(gameObject);
         }
 	}
@@ -41,7 +46,10 @@ public class bullet_2 : MonoBehaviour {
 
     public void explode()
     {
+        //Spawns the inverted bullet at this GameObject Pos
         spawnedBullet = Instantiate(invertedBullet, gameObject.transform.position, gameObject.transform.rotation);
+
+        //Flips the inverted bullet around
         spawnedBullet.transform.Rotate(0, 0, 180);
     }
 }

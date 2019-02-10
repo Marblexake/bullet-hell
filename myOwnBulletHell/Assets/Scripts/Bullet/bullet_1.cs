@@ -5,12 +5,11 @@ using UnityEngine;
 public class bullet_1 : MonoBehaviour {
 
     public float speed = 4f;
-
     private float MaxTimeInScene = 4.0f;
 
     void Start()
     {
-        //StartTime = Time.time;  
+
     }
 
     // Update is called once per frame
