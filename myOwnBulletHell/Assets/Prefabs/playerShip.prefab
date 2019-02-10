@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 95158557659576282}
   - component: {fileID: 114176821582764958}
   m_Layer: 0
-  m_Name: spaceship_2
+  m_Name: playerShip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,7 +71,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 045d81b9356592344a87422e4b653d60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveTolerance: 3
 --- !u!212 &212128240656355342
 SpriteRenderer:
   m_ObjectHideFlags: 1

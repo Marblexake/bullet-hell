@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212111447561622870}
   - component: {fileID: 95681429470126654}
   - component: {fileID: 114950233555138620}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: missile2_invertd
   m_TagString: Untagged
   m_Icon: {fileID: 0}

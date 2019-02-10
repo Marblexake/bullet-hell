@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4910320998831370}
   - component: {fileID: 212132647694119614}
   - component: {fileID: 114890786630912000}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bluebullet2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
