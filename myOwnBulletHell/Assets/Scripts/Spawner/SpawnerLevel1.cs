@@ -8,7 +8,7 @@ public class SpawnerLevel1 : MonoBehaviour
     public GameObject yellowBullet;
 
     private GameObject spawnedBullet;
-    private float spawnrate = 0.1f;
+    public float spawnrate = 0.1f;
 
 	void Start ()
     {
